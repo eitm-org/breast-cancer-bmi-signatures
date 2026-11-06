@@ -17,7 +17,7 @@ parser = argparse.ArgumentParser(description='PCA+GMM clustering with prototype 
 parser.add_argument('--clusters', type=int, default=2, help='Number of GMM clusters (default: 2)')
 parser.add_argument('--tile-type', type=str, default='stroma', choices=['stroma', 'tumor', 'all'],
                     help='Type of tiles: stroma, tumor, or all (default: stroma)')
-parser.add_argument('--pca-components', type=int, default=200, help='PCA components used for clustering (default: 50)')
+parser.add_argument('--pca-components', type=int, default=200, help='PCA components used for clustering (default: 200; the manuscript used 50)')
 parser.add_argument('--covariance-type', type=str, default='full', choices=['full', 'tied', 'diag', 'spherical'],
                     help='GMM covariance type (default: full)')
 parser.add_argument('--reg-covar', type=float, default=1e-5, help='GMM regularization added to the diagonal of covariance (default: 1e-5)')
@@ -32,7 +32,7 @@ parser.add_argument('--dpi', type=int, default=150, help='DPI for PCA scatter ou
 parser.add_argument('--output', type=str, default='pca_visualization.png', help='Output path for PCA scatter image')
 parser.add_argument('--grid-output', type=str, default='cluster_samples.png', help='Output path for high-confidence cluster grid image')
 parser.add_argument('--uncertain-grid-output', type=str, default='uncertain_samples.png', help='Output path for uncertain boundary tiles grid image')
-parser.add_argument('--num-samples', type=int, default=100, help='Samples per cluster in grid (default: 50)')
+parser.add_argument('--num-samples', type=int, default=100, help='Samples per cluster in grid (default: 100)')
 parser.add_argument('--tiles-path', type=str, default='/path/to/tile_vectors_90_ROI',
                     help='Folder with tile-level vectors (tile_vectors_90_ROI)')
 parser.add_argument('--base-image-path', type=str, default='/path/to/tile_images',

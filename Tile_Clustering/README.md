@@ -13,6 +13,8 @@ The code comes from the internal repository `Tile-Clustering-Pipeline` (commit `
 
 ## Pipeline
 
+Run the three scripts from inside `Tile_Clustering/`: they read `all_tiles.txt`, `tumor_toi.txt`, `stroma_toi.txt` and `centroids/` from the current folder.
+
 ```
 tile vectors (1536-dim)          compute_centroids.py            visualize_PCA_prototypes.py          reorganize_h5_by_confidence.py
 of the initialization slides ──► 2 starting centroids ──────────► GMM on all tiles of 304 slides ───► tiles with confidence >= 0.7,
@@ -71,7 +73,7 @@ The tiles of each slide and subregion are aggregated into one 2000-dimensional s
 
 ## Inputs
 
-- **Tile vectors**: `tile_vectors_90_ROI/<SLIDE>/<SLIDE>_01/Positive/<SLIDE>_01.h5` (tumor tiles) and `.../Negative/<SLIDE>_01.h5` (stroma tiles). Each file has an `ids` array (tile IDs such as `EITB-0000B_L1_R002280_C030020`) and a `vectors` array (1536 values per tile). These are provided in the Zenodo dataset.
+- **Tile vectors**: `tile_vectors_90_ROI/<SLIDE>/<SLIDE>_01/Positive/<SLIDE>_01.h5` (tumor tiles) and `.../Negative/<SLIDE>_01.h5` (stroma tiles). Each file has an `ids` array (tile IDs such as `EITB-0000B_L1_R002280_C030020`) and a `vectors` array (1536 values per tile). These are provided in the Zenodo dataset ([10.5281/zenodo.23992256](https://doi.org/10.5281/zenodo.23992256)).
 - **Slide lists**: `all_tiles.txt` (the 304 slides, one ID per line), `tumor_toi.txt` and `stroma_toi.txt` (initialization slides).
 - **Tile images** (optional): used only to draw the example-tile grids (`--base-image-path`). They are not distributed; without them the grids show grey placeholders.
 
