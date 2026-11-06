@@ -1,6 +1,6 @@
 # breast-cancer-bmi-signatures
 
-Code for the manuscript *Deep Learning Identifies BMI-Associated Morphologic Features in Breast Cancer Tissue*: analysis of histopathology slide vectors of breast cancer patients in relation to BMI (high vs. low). The repo has three folders: `Tile_Clustering` defines the high- and low-cellular-density subregions, and the two analysis folders read the slide vectors and BMI values. The data are available on Zenodo and are **not stored here**; every data path in the code is a placeholder (`/path/to/...`) that you replace with your own location.
+Code for the manuscript *Deep Learning Identifies BMI-Associated Morphologic Features in Breast Cancer Tissue*: analysis of histopathology slide vectors of breast cancer patients in relation to BMI (high vs. low). The repo has three folders: `Tile_Clustering` defines the high- and low-cellular-density subregions, and the two analysis folders read the slide vectors and BMI values. The data are available on Zenodo ([10.5281/zenodo.23992256](https://doi.org/10.5281/zenodo.23992256)) and are **not stored here**; every data path in the code is a placeholder (`/path/to/...`) that you replace with your own location.
 
 | Folder | What it does | Main output |
 |--------|--------------|-------------|
@@ -40,6 +40,14 @@ pip install -r requirements.txt
 - Tile vectors (`Tile_Clustering` only): one `.h5` file per slide and region, with 1536 values per tile.
 - Clinical table: `large_group.csv` with `block_name` and `BMI` for the 304 patients. `inter_heter_metrics.py` can also filter by `Age`, `ER` and `HER2`, but these columns are not part of the dataset.
 - BMI labels: high is BMI >= 30, low is BMI < 25; patients in between are dropped for the classification and are not used in the Fig. 4 plot.
+
+## Citation
+
+If you use this code, please cite the manuscript *Deep Learning Identifies BMI-Associated Morphologic Features in Breast Cancer Tissue* and the dataset (Zenodo, [10.5281/zenodo.23992256](https://doi.org/10.5281/zenodo.23992256)). Citation metadata is in [`CITATION.cff`](CITATION.cff); GitHub shows it under "Cite this repository".
+
+## Status
+
+This repository is the archived code for the manuscript and is not under active development. The version cited in the manuscript is tagged as a release.
 
 ## License
 

@@ -93,7 +93,7 @@ Settings: `RESULTS_DIR` (sample `/path/to/BMI_DATA/results`) and `OUTPUT_DIR` (s
 Settings: This notebook needs a spreadsheet with aggregated AUC results for multiple cohorts, regions, and methods. We 
 provide a sample spreadsheet (`aggregated_auc_results.xlsx`) as a template. The spreadsheet has multiple pages, one for 
 each combination of cohort and region. Each page has a column describing the ML method, and 10 columns for 5x2 
-cross-validation AUC values. In the example, the columns names use the format `s<seed>_part<fold>`, e.g., `s0011_part0` 
+cross-validation AUC values. In the example, the column names use the format `s<seed>, part<fold>`, e.g., `s0011, part0` 
 for seed 11, fold 0. 
 
 1. Loads the spreadsheet and extracts the AUC values for each method, cohort, and region.
